@@ -1,13 +1,13 @@
 class Link {
   constructor(bodyA, bodyB) {
-    var lastlink = bodyA.body.bodies.length - 2;
+    var lastlink = bodyA.body.bodies.length - 5;
     this.link = Constraint.create({
       bodyA: bodyA.body.bodies[lastlink],
-      pointA: { x: 0, y: 0 },
+      pointA: { x: -7, y: -5 },
       bodyB: bodyB.body,
-      pointB: { x: 0, y: 0 },
-      length: 10,
-      stiffness: 0.8
+      pointB: { x: -7, y: -5 },
+      length:10,
+      stiffness:1
     });
 
     World.add(world, this.link);
